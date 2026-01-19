@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about | sophia</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --bg-color: #fffffa;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-weight: 200;
+            letter-spacing: 0.5rem;
+            text-transform: lowercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .bonsai-container {
+            position: relative;
+            width: 300px;
+            margin: 1.5rem auto 0;
+            border: 1px solid #2d4a22;
+        }
+
+        .bonsai-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            mix-blend-mode: multiply;
+        }
+
+        .bonsai-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent gray */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 0.75rem;
+            letter-spacing: 0.1rem;
+            pointer-events: none;
+        }
+
+        .bonsai-container:hover .bonsai-overlay {
+            opacity: 1;
+        }
+
+        .back-link {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.8rem;
+            color: #aaa;
+            letter-spacing: 0.05rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <a href="index.html" class="back-link">back</a>
+        <div class="header-container">
+            <h1>about</h1>
+            <div class="bonsai-container">
+                <img src="bonsai.jpg" alt="Bonsai Tree" class="bonsai-img">
+                <div class="bonsai-overlay">1.18.26 bonsai</div>
+            </div>
+        </div>
+        <p>Hi! I'm Sophia, a fourth-year student at Caltech studying computer science. I'm passionate about machine learning, operating systems, and AI safety. In my free time, I love to read, draw, swim, and run. Feel free to reach out at sstiles [at] caltech [dot] edu.</p>
+    </main>
+    <footer>
+        &copy; 2026 sophia stiles
+    </footer>
+</body>
+</html>
